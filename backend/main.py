@@ -12,16 +12,14 @@ load_dotenv()
 
 app = FastAPI()
 
-# --- CORS Middleware (Allows frontend to connect) ---
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"], # Your React app's origin
+    allow_origins=["http://localhost:3000"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# --- Database Connection ---
 @app.on_event("startup")
 async def startup_db_client():
     ca = certifi.where()
@@ -32,7 +30,6 @@ async def startup_db_client():
 async def shutdown_db_client():
     app.mongodb_client.close()
 
-# --- API Endpoints ---
 @app.post("/api/auth/register", response_model=UserOut, status_code=status.HTTP_201_CREATED)
 async def register_user(user: UserIn):
     # Check if user already exists
