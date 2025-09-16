@@ -1,0 +1,9 @@
+# backend/requirements.txt
+fastapi
+uvicorn[standard]
+pydantic
+motor
+passlib[bcrypt]
+python-jose[cryptography]
+python-dotenv
+email-validator
