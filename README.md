@@ -34,8 +34,8 @@ Siga estas instruções para obter uma cópia do projeto e executá-lo em sua m�
 
 Primeiro, clone o projeto do GitHub para a sua máquina local:
 ```bash
-git clone <url-do-seu-repositorio>
-cd <pasta-do-seu-projeto>
+git clone https://github.com/fefaortiz/LoginandRegisterApp-labengsoft01.git
+cd my-python-app
 ```
 
 ---
