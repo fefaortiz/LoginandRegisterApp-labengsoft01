@@ -5,8 +5,6 @@ import { useNavigate } from 'react-router-dom';
 function LoginForm() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    // Add username to match the Pydantic model
-    username: '', 
     email: '',
     password: ''
   });
